@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include <string.h>
+#define LENGTH 100
+int main()
+{
+	int i, j=0, k;
+	char input[LENGTH];
+	char delim[4];
+	char* token[LENGTH - 1];
+
+	printf("Input String: ");
+	gets_s(input);
+
+	printf("Input delimiter: ");
+	gets_s(delim);
+	
+	token[j] = strtok(input, delim);
+	while (token[j] != NULL)
+	{
+		++j;
+		token[j] = strtok(NULL, delim);
+	}
+	k = j - 1;
+
+		printf("\nIN SEQUENCE\n");
+	for (i = 0; i <= k; i++)
+	{
+		printf("%s\n", token[i]);
+	}
+		printf("\nIN REVERSE SEQUENCE\n");
+	for (i = k; i >= 0; i--)
+	{
+		printf("%s\n", token[i]);
+	}
+	return 0;
+}
