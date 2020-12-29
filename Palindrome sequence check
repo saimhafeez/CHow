@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define length 20
+int Pointer(int* ptr_a[5], int SIZE)
+{
+	int i, j = SIZE;
+	int k = 1;
+	// Condition arr[0] == arr[n-1], arr[1] == arr[n-2] and so on.
+	// Where SIZE is the length of array entered by user.
+	for (i = 0; i < ((SIZE + 1 / 2) - 1); i++)
+	{
+		if (*ptr_a[SIZE - j] == *ptr_a[SIZE - k])
+		{
+			j--;
+			k++;
+		}
+		else
+		{
+			return 0;
+			break;
+		}
+	}
+	return 1;
+}
+
+int main()
+{
+	int sequence_array[length];
+	int i, function_call, size;
+	int* ptr_sequence_array[length];
+
+	printf("Enter size of array: ");
+	scanf_s("%d", &size);
+	for (i = 0; i < size; i++)
+	{
+		printf("Enter values: ");
+		scanf_s("%d", &sequence_array[i]);
+		ptr_sequence_array[i] = &sequence_array[i];
+	}
+	printf("sequence entered\n");
+	for (i = 0; i < size; i++)
+	{
+		printf("%d  ", *ptr_sequence_array[i]);
+	}
+	function_call = Pointer(ptr_sequence_array, size);
+	if (function_call == 1)
+	{
+		printf("\nSequence is a Palindrome\n");
+	}
+	if (function_call == 0)
+	{
+		printf("\nSequence is not a Palindrome\n");
+	}
+
+	return 0;
+}
