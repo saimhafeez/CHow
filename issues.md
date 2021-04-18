@@ -6,8 +6,8 @@
     <th>Possible Solution</th>
   </tr>
   <tr>
-    <td><small>Gives warning upon startup
-     <br><b>WARNING: Unsupported JavaFX configuration: <br> classes were loaded from 'unnamed module @deab04e'</b></small></td>
+    <td>Gives warning upon startup
+     <br><b>WARNING: Unsupported JavaFX configuration: <br> classes were loaded from 'unnamed module @deab04e'</b></td>
     <td>Unsolved</td>
     <td>null</td>
   </tr>
