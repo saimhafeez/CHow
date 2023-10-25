@@ -28,6 +28,7 @@ int main()
 	else
 	{
 		printf("Item not Found !\n");
+		printf("Item not Found !\n");
 	}
 	system("pause");
 	return 0;
